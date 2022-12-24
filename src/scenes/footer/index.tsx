@@ -30,9 +30,9 @@ const Footer = (props: Props) => {
             &#169; Evogym all rights reserved. 
           </p>
         </div>
-        <div className="flex">
+        <div className="flex justify-between flex-col gap-6 md:flex-row">
           {/* Links */}
-          <div className="mr-32 md:mr-16">
+          <div className="md:basis-1/2">
             <h6 className='text-md font-bold mb-3 capitalize'>Links</h6>
             <ul>
               {navLinks.map(item => {
@@ -44,7 +44,7 @@ const Footer = (props: Props) => {
           </div>
           
           {/* contact us */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-1">
             <h6 className='text-md font-bold mb-3 capitalize'>contact us</h6>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, quod.</p>
             <p>(333)425-6825</p>

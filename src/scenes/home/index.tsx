@@ -51,7 +51,7 @@ const Home = ({setSelectedPage}: Props) => {
                 hidden: {opacity: 0, x: -50}, 
                 visible: {opacity: 1, x: 0}
               }}
-              className="flex gap-10 items-center"
+              className="flex gap-8 sm:gap-10  items-center"
             >
               <ActionButton setSelectedPage={setSelectedPage}>Join Now</ActionButton>
               <AnchorLink

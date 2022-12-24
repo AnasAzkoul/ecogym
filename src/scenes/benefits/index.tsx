@@ -65,16 +65,8 @@ const Benefits = ({setSelectedPage}: Props) => {
         </motion.div>
         
         {/* Benefits */}
-        <motion.div
+        <div
           className="mt-8 flex flex-col gap-8 md:flex-row"
-          initial='hidden'
-          whileInView='visible'
-          viewport={{once: true, amount: 0.5}}
-          transition={{duration: 0.5}}
-          variants={{
-            hidden: {opacity: 0, y: 50}, 
-            visible: {opacity: 1, y: 0}
-          }}
         >
           {benefits.map(benefit => {
             return <Benefit
@@ -83,7 +75,7 @@ const Benefits = ({setSelectedPage}: Props) => {
               setSelectedPage={setSelectedPage}
             />
           })}
-        </motion.div>
+        </div>
         
         <div className="flex flex-col gap-4 mt-8 md:flex-row justify-between md:items-center">
           

@@ -21,7 +21,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
   const messageRef = useRef<HTMLTextAreaElement>(null)
   
   
-  const inputStyles = 'px-1 py-2 rounded-lg placeholder:text-sm placeholder:uppercase bg-primary-300 placeholder:text-white outline-none text-white md:w-full'
+  const inputStyles = 'px-1 md:px-4 py-2 rounded-lg placeholder:text-xs placeholder:uppercase bg-primary-300 placeholder:text-white outline-none text-white md:w-full'
   
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault(); 
@@ -109,7 +109,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
                   name="message"
                   id="message"
                   // cols={40}  
-                  // rows={8}
+                  rows={10}
                   placeholder='Your message'
                   className={`${inputStyles}`}
                   ref={messageRef}
@@ -117,7 +117,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
                 <button
                   type='submit'
                   className='
-                    self-start rounded-md bg-secondary-500 text-white px-10 py-2 hover:bg-primary-500 hover:text-white cursor-pointer transition-all duration-500'
+                    self-start rounded-md bg-secondary-500 text-white px-4 md:px-8 py-2 hover:bg-primary-500 hover:text-white cursor-pointer transition-all duration-500'
                 >
                   submit
                 </button>

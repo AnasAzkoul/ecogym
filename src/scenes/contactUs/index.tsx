@@ -21,7 +21,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
   const messageRef = useRef<HTMLTextAreaElement>(null)
   
   
-  const inputStyles = 'px-8 py-2 rounded-lg placeholder:text-sm placeholder:uppercase bg-primary-300 placeholder:text-white outline-none text-white'
+  const inputStyles = 'px-1 py-2 rounded-lg placeholder:text-sm placeholder:uppercase bg-primary-300 placeholder:text-white outline-none text-white md:w-full'
   
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault(); 
@@ -47,7 +47,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
         className='section-container flex flex-col md:flex-row gap-8 justify-between'
       >
-        <div className="basis-1/2 mr-auto">
+        <div className="md:basis-1/2 mr-auto">
           {/* Header */}
           <motion.div
             className='basis-1/2'
@@ -72,7 +72,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
           </motion.div>
           
           {/* Form */}
-          <div className='flex flex-col gap-8 md:flex-row'>
+          <div className='flex flex-col gap-8'>
             <motion.div
               initial='hidden'
               whileInView='visible'
@@ -85,7 +85,7 @@ const ContactUs = ({setSelectedPage}: Props) => {
             >
               <form
                 onSubmit={(e) => handleSubmit(e)}
-                className='flex-col flex gap-4'
+                className='flex-col flex gap-4' 
               >
                 <input
                   type="text"
@@ -108,8 +108,8 @@ const ContactUs = ({setSelectedPage}: Props) => {
                 <textarea
                   name="message"
                   id="message"
-                  cols={40}
-                  rows={10}
+                  // cols={40}  
+                  // rows={8}
                   placeholder='Your message'
                   className={`${inputStyles}`}
                   ref={messageRef}
